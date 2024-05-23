@@ -1,4 +1,4 @@
-body >.scaffold > :is(top-nav, navigation-rail, side-nav, footer),
+body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
 main > :not(:last-child),
 main > :last-child > navigation-tree,
 main .toc-container {
@@ -14,31 +14,3 @@ section {
   background-color: rgb(88, 56, 56);
 }
 
-.button{
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer): This selector targets elements top-nav, navigation-rail, side-nav, and footer that are direct children of an element with the class scaffold which is a direct child of the body. It hides these elements using display: none.
-
-main > :not(:last-child): This selector targets all direct children of the main element except the last child and hides them using display: none.
-
-main > :last-child > navigation-tree: This selector targets the navigation-tree element that is a direct child of the last child of the main element and hides it using display: none.
-
-main .toc-container: This selector targets any element with the class toc-container inside the main element and hides it using display: none.
-
-css
-main > :last-child: This selector targets the last child of the main element and applies a top and bottom margin. The margin size is set to the smaller value between 10vmax (10% of the viewport's larger dimension, either width or height) and 10rem (10 times the font size of the root element). */

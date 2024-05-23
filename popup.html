@@ -2,12 +2,26 @@
   <body>
     <!-- <h1>Chrome Gnome</h1> -->
     <body>
+      <!-- Added picture to top of popup menu and set style-->
+      <img
+        src="images/TwoGnomes.png"
+        id="twoGmomes"
+        style="display: block; margin-left: auto; margin-right: auto"
+      />
+      <!-- Adjusted height and width parameters for buttons (; height: 10px; width: 10px removed) -->
+      <button id="On" style="background: #3630a3; color: white">
+        POPUP IS ON
+      </button>
+      <!-- <button id="min15" value="15">15 Minutes</button> -->
       <button
-        id="On"
-        style="background: #3630a3; color: white; height: 10px; width: 10px"
-      ></button>
-      <button id="Off"
-      style="background: #3630a3; color: white; height: 10px; width: 10px"></button>
+        id="Off"
+        style="background: red; color: white; height: 80px; width: 100px"
+      >
+        POPUP IS ON
+      </button>
+      <!-- Added input box and submit button -->
+      <input type="text" id="urlInput" placeholder="Enter URL:" />
+      <button id="myButton" class="float-left submit-button">Submit</button>
     </body>
     <!-- <script src="popup.js"></script> -->
   </body>
