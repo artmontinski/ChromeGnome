@@ -3,19 +3,16 @@
   "name": "Chrome Gnome",
   "description": "Manipulates words on page",
   "version": "0.01",
-  "permissions": ["activeTab"],
-  "icons": {
-    "OFF": "images/LoneGnome.png"
-  },
-
+  "permissions": ["activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
 
   "action": {
     "default_icon": {
-      "OFF": "images/LoneGnome.png",
-      "ON": "images/TwoGnomes.png"
-    }
+      "16": "images/LoneGnome.png",
+      "32": "images/TwoGnomes.png"
+    },
+    "default_popup": "popup.html"
   }
 }
