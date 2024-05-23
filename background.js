@@ -1,4 +1,34 @@
 chrome.runtime.onInstalled.addListener(() => {
+  chrome.action.setBadgeBackgroundColor({ color: [255, 11, 39, 1] });
+  chrome.action.setBadgeText({
+    text: "GO!",
+  });
+});
+
+chrome.action.onClicked.addListener((tab) => {
+  chrome.action.setBadgeBackgroundColor({ color: [255, 255, 0, 255] });
+  chrome.action.setBadgeText({
+    text: "ON",
+  });
+  if (tab && tab.url) {
+    const currentUrl = encodeURIComponent(tab.url);
+    const redirectUrl = `https://archive.is/${currentUrl}`;
+    chrome.tabs.update(tab.id, { url: redirectUrl }, () => {
+      chrome.action.setBadgeBackgroundColor({ color: [0, 228, 140, 1] });
+      chrome.action.setBadgeText({
+        text: "YAY",
+      });
+      setTimeout(() => {
+        chrome.action.setBadgeBackgroundColor({ color: [255, 255, 0, 255] });
+        chrome.action.setBadgeText({
+          text: "NEXT",
+        });
+      }, 3000);
+    });
+  }
+});
+
+/*chrome.runtime.onInstalled.addListener(() => {
   chrome.action.setBadgeText({
     text: "OFF",
   });
@@ -35,6 +65,4 @@ chrome.action.onClicked.addListener(async (tab) => {
     }
   }
 });
-//   }
-
-// });
+*/
